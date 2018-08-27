@@ -1,0 +1,14 @@
+# 配置访问端口
+server:
+  port: 8080
+
+#利用配置文件给 girl 进行赋值操作
+
+#cupSize: B
+#age: 18
+#content: this girl's cupSize is ${cupSize} and her age is ${age}
+
+#girl:
+#  name: aha
+#  age: 18
+#  money: 0

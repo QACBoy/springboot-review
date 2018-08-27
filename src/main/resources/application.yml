@@ -1,0 +1,28 @@
+# 直接使用 .yml 文件代替了原来的配置文件 application.propertities
+spring:
+#  导入所要使用的配置文件 application-dev.yml
+  profiles:
+    active: dev
+#  配置数据库的连接信息
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbgirl
+    username: tester
+    password: lkr.7664
+#  每当项目运行时，自动创建数据库（如果不存在数据表，则会根据 Entity 类中所定义的属性自动生成，如果存在，则会删除原来的数据表）ddl-auto: create
+#  每当项目运行时，自动更新数据库（如果不存在数据表，则会根据 Entity 类中所定义的属性自动生成，如果存在，当表字段改变时，会添加新的表字段）ddl-auto: update
+#  运行时显示 SQL 语句show-sql: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+#server:
+#  port: 8080
+##cupSize: B
+##age: 18
+##content: this girl's cupSize is ${cupSize} and her age is ${age}
+#girl:
+#  cupSize: B
+#  age: 18
